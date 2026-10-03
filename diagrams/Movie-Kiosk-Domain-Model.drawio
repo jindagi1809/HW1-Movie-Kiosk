@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="domain-model" name="Domain Model">
+    <mxGraphModel dx="1100" dy="800" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1100" pageHeight="800">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Movie Theater Ticket Kiosk — Domain Model" style="text;html=1;align=center;fontSize=25;fontStyle=1;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="100" y="30" width="900" height="50" />
+        </mxCell>
+        <mxCell id="movie" value="&lt;div style=&quot;font-weight:bold;text-align:center;padding:9px;font-size:18px&quot;&gt;Movie&lt;/div&gt;&lt;hr style=&quot;margin:0&quot;&gt;&lt;div style=&quot;text-align:left;padding:10px;line-height:1.6&quot;&gt;movieId: String&lt;br&gt;title: String&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#F4F8FD;strokeColor=#355C7D;strokeWidth=2;fontSize=15;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="80" y="150" width="220" height="135" />
+        </mxCell>
+        <mxCell id="showtime" value="&lt;div style=&quot;font-weight:bold;text-align:center;padding:9px;font-size:18px&quot;&gt;Showtime&lt;/div&gt;&lt;hr style=&quot;margin:0&quot;&gt;&lt;div style=&quot;text-align:left;padding:10px;line-height:1.6&quot;&gt;showtimeId: String&lt;br&gt;startTime: DateTime&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#F4F8FD;strokeColor=#355C7D;strokeWidth=2;fontSize=15;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="440" y="150" width="220" height="135" />
+        </mxCell>
+        <mxCell id="seat" value="&lt;div style=&quot;font-weight:bold;text-align:center;padding:9px;font-size:18px&quot;&gt;Seat&lt;/div&gt;&lt;hr style=&quot;margin:0&quot;&gt;&lt;div style=&quot;text-align:left;padding:10px;line-height:1.6&quot;&gt;seatNumber: String&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#F4F8FD;strokeColor=#355C7D;strokeWidth=2;fontSize=15;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="800" y="150" width="220" height="135" />
+        </mxCell>
+        <mxCell id="customer" value="&lt;div style=&quot;font-weight:bold;text-align:center;padding:9px;font-size:18px&quot;&gt;Customer&lt;/div&gt;&lt;hr style=&quot;margin:0&quot;&gt;&lt;div style=&quot;text-align:left;padding:10px;line-height:1.6&quot;&gt;customerId: String&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#F4F8FD;strokeColor=#355C7D;strokeWidth=2;fontSize=15;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="80" y="420" width="220" height="135" />
+        </mxCell>
+        <mxCell id="ticket" value="&lt;div style=&quot;font-weight:bold;text-align:center;padding:9px;font-size:18px&quot;&gt;Ticket&lt;/div&gt;&lt;hr style=&quot;margin:0&quot;&gt;&lt;div style=&quot;text-align:left;padding:10px;line-height:1.6&quot;&gt;ticketId: String&lt;br&gt;purchaseTime: DateTime&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#F4F8FD;strokeColor=#355C7D;strokeWidth=2;fontSize=15;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="440" y="420" width="220" height="135" />
+        </mxCell>
+        <mxCell id="payment" value="&lt;div style=&quot;font-weight:bold;text-align:center;padding:9px;font-size:18px&quot;&gt;Payment&lt;/div&gt;&lt;hr style=&quot;margin:0&quot;&gt;&lt;div style=&quot;text-align:left;padding:10px;line-height:1.6&quot;&gt;paymentId: String&lt;br&gt;amount: Decimal&lt;br&gt;status: String&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#F4F8FD;strokeColor=#355C7D;strokeWidth=2;fontSize=15;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="800" y="420" width="220" height="135" />
+        </mxCell>
+        <mxCell id="e1" value="has" edge="1" parent="1" source="movie" target="showtime" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeWidth=1.5;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=14;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="e1">
+          <mxGeometry as="geometry" x="-0.78" y="-18" relative="1">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=14;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="e1">
+          <mxGeometry as="geometry" x="0.78" y="-18" relative="1">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="offers" edge="1" parent="1" source="showtime" target="seat" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeWidth=1.5;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2s" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=14;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="e2">
+          <mxGeometry as="geometry" x="-0.78" y="-18" relative="1">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2t" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=14;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="e2">
+          <mxGeometry as="geometry" x="0.78" y="-18" relative="1">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="purchases" edge="1" parent="1" source="customer" target="ticket" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeWidth=1.5;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=14;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="e3">
+          <mxGeometry as="geometry" x="-0.78" y="-18" relative="1">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=14;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="e3">
+          <mxGeometry as="geometry" x="0.78" y="-18" relative="1">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="is for" edge="1" parent="1" source="showtime" target="ticket" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeWidth=1.5;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e4s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=14;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="e4">
+          <mxGeometry as="geometry" x="-0.78" y="-18" relative="1">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=14;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="e4">
+          <mxGeometry as="geometry" x="0.78" y="-18" relative="1">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="paid by" edge="1" parent="1" source="ticket" target="payment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeWidth=1.5;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=14;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="e5">
+          <mxGeometry as="geometry" x="-0.78" y="-18" relative="1">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5t" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=14;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="e5">
+          <mxGeometry as="geometry" x="0.78" y="-18" relative="1">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="reserves" edge="1" parent="1" source="seat" target="ticket" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeWidth=1.5;fontSize=14;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=1;entryY=0.2;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=14;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="e6">
+          <mxGeometry as="geometry" x="-0.78" y="-18" relative="1">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=14;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="e6">
+          <mxGeometry as="geometry" x="0.78" y="-18" relative="1">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="&lt;b&gt;Domain rules&lt;/b&gt;&lt;br&gt;Seat represents a physical seat reused across showtimes.&lt;br&gt;Each Ticket identifies one Showtime and one Seat.&lt;br&gt;&lt;b&gt;Constraint:&lt;/b&gt; At most one sold Ticket per (Showtime, Seat) pair.&lt;br&gt;Ticket and Payment describe successful purchases in this simplified model." style="shape=note;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacing=16;fillColor=#FFF7DF;strokeColor=#D6B656;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="170" y="630" width="760" height="125" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

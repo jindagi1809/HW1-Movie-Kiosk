@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="use-case" name="Use Case">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1000" pageHeight="700">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="boundary" value="Movie Theater Ticket Kiosk" vertex="1" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=none;strokeColor=#355C7D;strokeWidth=2;verticalAlign=top;align=center;spacingTop=20;fontSize=23;fontStyle=1;">
+          <mxGeometry as="geometry" x="350" y="80" width="550" height="530" />
+        </mxCell>
+        <mxCell id="customer" value="Customer" vertex="1" parent="1" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#FFFFFF;strokeColor=#355C7D;strokeWidth=2;fontSize=20;">
+          <mxGeometry as="geometry" x="110" y="300" width="65" height="120" />
+        </mxCell>
+        <mxCell id="view" value="View Showtimes" vertex="1" parent="1" style="ellipse;html=1;whiteSpace=wrap;fillColor=#F4F8FD;strokeColor=#355C7D;strokeWidth=2;fontSize=20;">
+          <mxGeometry as="geometry" x="510" y="180" width="280" height="85" />
+        </mxCell>
+        <mxCell id="association-view" value="" edge="1" parent="1" source="customer" target="view" style="html=1;rounded=0;endArrow=none;startArrow=none;strokeColor=#355C7D;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="select" value="Select Seat" vertex="1" parent="1" style="ellipse;html=1;whiteSpace=wrap;fillColor=#F4F8FD;strokeColor=#355C7D;strokeWidth=2;fontSize=20;">
+          <mxGeometry as="geometry" x="510" y="330" width="280" height="85" />
+        </mxCell>
+        <mxCell id="association-select" value="" edge="1" parent="1" source="customer" target="select" style="html=1;rounded=0;endArrow=none;startArrow=none;strokeColor=#355C7D;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="purchase" value="Purchase Ticket" vertex="1" parent="1" style="ellipse;html=1;whiteSpace=wrap;fillColor=#F4F8FD;strokeColor=#355C7D;strokeWidth=2;fontSize=20;">
+          <mxGeometry as="geometry" x="510" y="480" width="280" height="85" />
+        </mxCell>
+        <mxCell id="association-purchase" value="" edge="1" parent="1" source="customer" target="purchase" style="html=1;rounded=0;endArrow=none;startArrow=none;strokeColor=#355C7D;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
